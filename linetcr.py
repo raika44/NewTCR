@@ -172,8 +172,8 @@ def bot(op):
                if op.param2 not in Bots:
                    G = ka.getGroup(op.param1)
                    G.preventJoinByTicket = True
-                   random.choice(DEF).kickoutFromGroup(op.param1,[op.param2])
-                   random.choice(DEF).updateGroup(G)
+                   random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+                   random.choice(KAC).updateGroup(G)
         #------Protect Group Kick finish-----#
 
         #------Open QR Kick start------#
@@ -243,15 +243,15 @@ def bot(op):
             print op.param3
             if mid in op.param3:
                 G = cl.getGroup(op.param1)
-                if wait["autoJoin"] == False:
-                    if wait["autoCancel"]["on"] == False:
+                if wait["autoJoin"] == True:
+                    if wait["autoCancel"]["on"] == True:
                         if len(G.members) <= wait["autoCancel"]["members"]:
                             cl.rejectGroupInvitation(op.param1)
                         else:
                             cl.acceptGroupInvitation(op.param1)
                     else:
                         cl.acceptGroupInvitation(op.param1)
-                elif wait["autoCancel"]["on"] == False:
+                elif wait["autoCancel"]["on"] == True:
                     if len(G.members) <= wait["autoCancel"]["members"]:
                         cl.rejectGroupInvitation(op.param1)
             else:
@@ -268,7 +268,7 @@ def bot(op):
         if op.type == 19:
             if op.param3 in admin:
                  random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-                 random.choice(KAC).inviteIntoGroup(op.param1,admin)
+                 random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
             else:
                 pass
 
@@ -325,6 +325,7 @@ def bot(op):
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+                            random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
                         except:
                             print ("clientが蹴り規制orグループに存在しない為、\n["+op.param1+"]\nの\n["+op.param2+"]\nを蹴る事ができませんでした。\nブラックリストに追加します。")
                         if op.param2 in wait["blacklist"]:
@@ -360,6 +361,7 @@ def bot(op):
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+                            random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
                         except:
                             print ("clientが蹴り規制orグループに存在しない為、\n["+op.param1+"]\nの\n["+op.param2+"]\nを蹴る事ができませんでした。\nブラックリストに追加します。")
                         if op.param2 in wait["blacklist"]:
@@ -397,6 +399,7 @@ def bot(op):
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+                            random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
                         except:
                             print ("clientが蹴り規制orグループに存在しない為、\n["+op.param1+"]\nの\n["+op.param2+"]\nを蹴る事ができませんでした。\nブラックリストに追加します。")
                         if op.param2 in wait["blacklist"]:
