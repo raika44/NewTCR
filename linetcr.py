@@ -91,14 +91,14 @@ admin=["u5427d8047ab127f5e237eaedd1f0b93b"]
 creator=["u5427d8047ab127f5e237eaedd1f0b93b"]
 wait = {
     'contact':False,
-    'autoJoin':True,
+    'autoJoin':False,
     'autoCancel':{"on":True,"members":1},
     'leaveRoom':True,
     'timeline':True,
     'autoAdd':True,
-    'message':"Owner : line://ti/p/~tobyg74",
+    'message':"Owner : line.me/ti/p/tF0Bkk0wDD",
     "lang":"JP",
-    "comment":"Owner : line://ti/p/~tobyg74",
+    "comment":"Owner : line.me/ti/p/tF0Bkk0wDD",
     "commentOn":True,
     "commentBlack":{},
     "wblack":False,
@@ -243,15 +243,15 @@ def bot(op):
             print op.param3
             if mid in op.param3:
                 G = cl.getGroup(op.param1)
-                if wait["autoJoin"] == True:
-                    if wait["autoCancel"]["on"] == True:
+                if wait["autoJoin"] == False:
+                    if wait["autoCancel"]["on"] == False:
                         if len(G.members) <= wait["autoCancel"]["members"]:
                             cl.rejectGroupInvitation(op.param1)
                         else:
                             cl.acceptGroupInvitation(op.param1)
                     else:
                         cl.acceptGroupInvitation(op.param1)
-                elif wait["autoCancel"]["on"] == True:
+                elif wait["autoCancel"]["on"] == False:
                     if len(G.members) <= wait["autoCancel"]["members"]:
                         cl.rejectGroupInvitation(op.param1)
             else:
@@ -427,15 +427,15 @@ def bot(op):
         if op.type == 13:
             if mid in op.param3:
                 G = cl.getGroup(op.param1)
-                if wait["autoJoin"] == True:
-                    if wait["autoCancel"]["on"] == True:
+                if wait["autoJoin"] == False:
+                    if wait["autoCancel"]["on"] == False:
                         if len(G.members) <= wait["autoCancel"]["members"]:
                             cl.rejectGroupInvitation(op.param1)
                         else:
                             cl.acceptGroupInvitation(op.param1)
                     else:
                         cl.acceptGroupInvitation(op.param1)
-                elif wait["autoCancel"]["on"] == True:
+                elif wait["autoCancel"]["on"] == False:
                     if len(G.members) <= wait["autoCancel"]["members"]:
                         cl.rejectGroupInvitation(op.param1)
             else:
