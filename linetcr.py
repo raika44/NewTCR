@@ -6,22 +6,20 @@ from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re
 
 cl = TOBY.LINE()
-cl.login(qr=True)
+cl.login(token="EnHZ13lS8hRHKLhetqrc.eoXp0xK1vqkdnL9Q78yCpa.mM3xj1D0c8y4s7PX53fnwFdljjHzp8WrDtu5g2fj1bA=")
 cl.loginResult()
 
 kc = TOBY.LINE()
-kc.login(qr=True)
+kc.login(token="En4aaHlzzXHaZrO74Sqb.672la4CfyuJmLCgFJdKosW.NjB/NCDLjL7uHp57WsQj7aTuwYZU3bcC55m8i0ggGk8=")
 kc.loginResult()
 
 kk = TOBY.LINE()
-kk.login(qr=True)
+kk.login(token="EnGdCCh2sjVYPl3BgXj2.Zm4gXz6MY8xdnV92S49yaG.ec+UC+Gl/SpCQdUkc/tL6/FlSqp+JKGtVbEvzxxFRls=")
 kk.loginResult()
 
 ki = TOBY.LINE()
-ki.login(qr=True)
+ki.login(token="En8VVfFSRLQCDrZkYq34.AbZfX80renrInaDEsR0v1a.s62EO6keurG1/tmN3GEuq2IVk4/Rp1xNWTRqRtvZlYc=")
 ki.loginResult()
-
-cl
 
 print "login success"
 reload(sys)
@@ -78,7 +76,7 @@ helpMessage ="""!CommandMember!
 => Vk = Mengeluarkan 2 Anggora/Lebih Dari Grup
 => Cleanse = Membersihkan Grup
 ==================================================
-BOT : TOBY
+BOT : Kirisaki Chitoge
 SUPPORT BY : CYBER BOT CRIME
 Hanya Admin Yang Bisa Menggunakan Bot
 """
