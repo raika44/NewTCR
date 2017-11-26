@@ -266,19 +266,18 @@ def bot(op):
                     cl.cancelGroupInvitation(op.param1, matched_list)
 
         if op.type == 19:
-            if op.param3 in admin:
-                 random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-                 random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
-            else:
-                pass
+           if op.param3 in admin:
+              random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+              cl.inviteIntoGroup(op.param1,admin)
+           else:
+               pass
 
         if op.type == 19:
-            if op.param2 not in admin:
-                 random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
-                 wait["blacklist"][op.param2] = True
-                 print "kicker kicked"
-            else:
-                pass
+           if op.param2 not in Bots:
+              random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+              random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
+           else: 
+               pas
 
         if op.type == 19:
                 if mid in op.param3:
@@ -286,9 +285,12 @@ def bot(op):
                         pass
                     try:
                         ki.kickoutFromGroup(op.param1,[op.param2])
+                        kk.kickoutFromGroup(op.param1,[op.param2])
+                        kc.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
-                            random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+                	    random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+                            random.choice(KAC).inviteIntoGroup(op.param1,[op.param3])
                         except:
                             print ("client Kick regulation or Because it does not exist in the group、\n["+op.param1+"]\nの\n["+op.param2+"]\nを蹴る事ができませんでした。\nブラックリストに追加します。")
                         if op.param2 in wait["blacklist"]:
@@ -320,6 +322,7 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
+                        ki.kickoutFromGroup(op.param1,[op.param2])
                         kk.kickoutFromGroup(op.param1,[op.param2])
                         kc.kickoutFromGroup(op.param1,[op.param2])
                     except:
@@ -356,8 +359,9 @@ def bot(op):
                     if op.param2 in Bots:
                         pass
                     try:
-                        kc.kickoutFromGroup(op.param1,[op.param2])
+                        ki.kickoutFromGroup(op.param1,[op.param2])
                         kk.kickoutFromGroup(op.param1,[op.param2])
+                        kc.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
                             random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
